@@ -3,7 +3,6 @@ import React from "react";
 import {
 	Pressable,
 	Animated,
-	View
 } from "react-native";
 
 import PropTypes from "prop-types";
@@ -21,15 +20,12 @@ const PressableOpacity = ({ children, onPress }) => {
 		<Pressable
 			onPressIn={fadeIn}
 			onPressOut={fadeOut}
-			className="w-full h-12 relative"
+			className="w-full h-auto relative"
 			onPress={onPress}>
+			{children}
 			<Animated.View
-				className="w-full h-full absolute top-0 left-0 bg-slate-200 "
+				className="w-full h-full absolute top-0 left-0 bg-gray-100 "
 				style={{ opacity: opacityValue }} />
-			<View
-				className="items-center justify-center w-full h-full absolute top-0 left-0">
-				{children}
-			</View>
 		</Pressable>
 	);
 };
