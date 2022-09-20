@@ -12,18 +12,10 @@ storiesOf("PressableOpacity", module)
 	.add("making a button", () => (
 		<View className="w-full px-4">
 			<PressableOpacity onPress={action("clicked-text")}>
-				<View className="w-full p-4 bg-blue-500 border-red-500 border justify-center rounded-md">
+				<View className="w-full p-4 bg-blue-500 items-center justify-center rounded-md">
 					<Text className="text-white">Button Text</Text>
 				</View>
 			</PressableOpacity>
 		</View>
-	))
-	.add("making an image pressable", () => (
-		<View className="w-full px-4">
-			<PressableOpacity onPress={action("clicked-text")}>
-				<View className="w-full p-4 bg-blue-500 border-red-500 border justify-center rounded-md">
-					<Image className="text-white" />
-				</View>
-			</PressableOpacity>
-		</View>
 	));
+
