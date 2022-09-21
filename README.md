@@ -32,4 +32,6 @@ To use this component lib inside your project
 
 1. make sure you are part of the `@digital-art-dealers` on NPM 
 2. run `npm login` on your terminal to authenticate your NPM credentials
-2. run `yarn add @digital-art-dealers/react-native-component-lib` in your project
+3. Install and configure (nativewind)[https://www.nativewind.dev/]
+4. run `yarn add @digital-art-dealers/react-native-component-lib` in your project
+5. add `node_modules/@digital-art-dealers/react-native-component-lib/**/*.{js,jsx,ts,tsx}` to your `tailwind.config.js`
