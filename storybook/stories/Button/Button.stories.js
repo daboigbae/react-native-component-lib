@@ -8,30 +8,8 @@ import { storiesOf } from "@storybook/react-native";
 import CenterView from "../CenterView";
 import { View } from "react-native";
 import Button from "../../../src/components/Button";
+import { BACKGROUND_COLORS, BORDER_COLORS, COLORS_GROUP_ID, DEFAULT_BACKGROUND_COLOR, DEFAULT_BORDER_COLOR, DEFAULT_TEXT_COLOR, TEXT_COLORS } from "../consts";
 
-const backgroundColors = {
-	"bg-red-500": "bg-red-500",
-	"bg-blue-500": "bg-blue-500",
-	"bg-yellow-500": "bg-yellow-500",
-};
-
-const borderColors = {
-	"border-red-500": "border-red-500",
-	"border-blue-500": "border-blue-500",
-	"border-yellow-500": "border-yellow-500",
-};
-
-const textColors = {
-	"text-red-500": "text-red-500",
-	"text-blue-500": "text-blue-500",
-	"text-yellow-500": "text-yellow-500",
-};
-
-const groupId = "Colors";
-
-const defaultBackgroundColor = "bg-red-500";
-const defaultBorderColor = "border-red-500";
-const defaultTextColor = "text-red-500";
 
 storiesOf("Buttons", module)
 	.addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
@@ -40,16 +18,16 @@ storiesOf("Buttons", module)
 			<Button
 				label={(text("label", "Button Label"))} 
 				onPress={action("clicked-text")}
-				buttonClassName={select("buttonClassName", backgroundColors, defaultBackgroundColor, groupId)}
-				textClassName={select("textClassName", textColors, defaultTextColor, groupId)}/>
+				buttonClassName={select("buttonClassName", BACKGROUND_COLORS, DEFAULT_BACKGROUND_COLOR, COLORS_GROUP_ID)}
+				textClassName={select("textClassName", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}/>
 		</View>
 	))
 	.add("Outline Button", () => (
 		<View className="w-full px-4">
 			<Button.Outline
 				label={(text("label", "Button Label"))} 
-				borderColor={select("Outline Color", borderColors, defaultBorderColor, groupId)}
-				textColor={select("textClassName", textColors, defaultTextColor, groupId)}
+				borderColor={select("Outline Color", BORDER_COLORS, DEFAULT_BORDER_COLOR, COLORS_GROUP_ID)}
+				textColor={select("textClassName", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}
 				onPress={action("clicked-text")}
 			/>
 		</View>
@@ -58,7 +36,7 @@ storiesOf("Buttons", module)
 		<View className="w-full px-4">
 			<Button.Text
 				label={(text("label", "Button Label"))} 
-				textColor={select("textClassName", textColors, defaultTextColor, groupId)}
+				textColor={select("textClassName", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}
 				onPress={action("clicked-text")}
 			/>
 		</View>

@@ -6,6 +6,7 @@ import { View, Text, FlatList } from "react-native";
 import ItemSeparator from ".";
 
 import {select} from "@storybook/addon-knobs";
+import { BORDER_COLORS, COLORS_GROUP_ID, DEFAULT_BORDER_COLOR } from "../../../storybook/stories/consts";
 
 const SONGS  = [{
 	artist: "Gucci Mane", 
@@ -57,17 +58,6 @@ const SONGS  = [{
 }
 ];
 
-const borderColors = {
-	"none": null, 
-	"border-red-500 border-2": "border-red-500 border-2",
-	"border-blue-500 border-2": "border-blue-500 border-2",
-	"border-yellow-500 border-2": "border-yellow-500 border-2",
-};
-
-const groupId = "Colors";
-
-const defaultBorderColor = "border-red-500";
-
 const renderItem = ({ item }) => (
 	<View>
 		<View className="w-full py-4 px-4 justify-between flex-row">
@@ -91,7 +81,17 @@ storiesOf("Item Separator", module)
 				data={SONGS}
 				renderItem={renderItem}
 				ItemSeparatorComponent={
-					() => <ItemSeparator borderStyle={select("borderStyle", borderColors, defaultBorderColor, groupId)}/>}
+					() => 
+						<ItemSeparator 
+							borderStyle={
+								select(
+									"borderStyle", 
+									BORDER_COLORS, 
+									DEFAULT_BORDER_COLOR,
+									COLORS_GROUP_ID
+								)
+							}/>
+				}
 				stickyHeaderIndices={[0]}/>
 		</View>
 	));
