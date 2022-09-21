@@ -5,7 +5,7 @@ import { storiesOf } from "@storybook/react-native";
 import { View, Text, FlatList } from "react-native";
 import ItemSeparator from ".";
 
-import {select, text} from "@storybook/addon-knobs";
+import {select} from "@storybook/addon-knobs";
 
 const SONGS  = [{
 	artist: "Gucci Mane", 
