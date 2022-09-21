@@ -2,7 +2,6 @@
   "name": "@digital-art-dealers/react-native-component-lib",
   "version": "1.0.5",
   "main": "node_modules/expo/AppEntry.js",
-
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -54,7 +53,6 @@
     "@react-native-async-storage/async-storage": "~1.17.3",
     "expo": "~46.0.9",
     "expo-status-bar": "~1.4.0",
-    "husky": "^8.0.1",
     "nativewind": "^2.0.10",
     "react": "18.0.0",
     "react-dom": "18.0.0",

@@ -5,6 +5,8 @@ import { storiesOf } from "@storybook/react-native";
 import { View, Text, FlatList } from "react-native";
 import ItemSeparator from ".";
 
+import {select, text} from "@storybook/addon-knobs";
+
 const SONGS  = [{
 	artist: "Gucci Mane", 
 	title: "Look ma I did it",
@@ -55,6 +57,17 @@ const SONGS  = [{
 }
 ];
 
+const borderColors = {
+	"none": null, 
+	"border-red-500 border-2": "border-red-500 border-2",
+	"border-blue-500 border-2": "border-blue-500 border-2",
+	"border-yellow-500 border-2": "border-yellow-500 border-2",
+};
+
+const groupId = "Colors";
+
+const defaultBorderColor = "border-red-500";
+
 const renderItem = ({ item }) => (
 	<View>
 		<View className="w-full py-4 px-4 justify-between flex-row">
@@ -71,23 +84,14 @@ const ListHeaderComponent = () => (
 );
 
 storiesOf("Item Separator", module)
-	.add("Transparent Spacing", () => (
+	.add("FlatList Example", () => (
 		<View className="w-full h-full">
 			<FlatList
 				ListHeaderComponent={ListHeaderComponent}
 				data={SONGS}
 				renderItem={renderItem}
-				ItemSeparatorComponent={ItemSeparator}
-				stickyHeaderIndices={[0]}/>
-		</View>
-	))
-	.add("Line Spacing", () => (
-		<View className="w-full h-full">
-			<FlatList
-				ListHeaderComponent={ListHeaderComponent}
-				data={SONGS}
-				renderItem={renderItem}
-				ItemSeparatorComponent={() => <ItemSeparator borderStyle="border-b-black border-b-2"/>}
+				ItemSeparatorComponent={
+					() => <ItemSeparator borderStyle={select("borderStyle", borderColors, defaultBorderColor, groupId)}/>}
 				stickyHeaderIndices={[0]}/>
 		</View>
 	));
