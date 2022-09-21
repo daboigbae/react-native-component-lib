@@ -2555,9 +2555,9 @@
     "@types/reactcss" "*"
 
 "@types/react-native@~0.69.1":
-  version "0.69.11"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.69.11.tgz#420b238b60f1556d3ff4fa6015f0c7569b5caf50"
-  integrity sha512-GPRDU++zfvawJ7tHeNIvNR9jkTi5yz+/Ocm4xgI1e1waUg6RHGaa4nUStLTj3MZrUNMwDAWnRhZllFpdXV6SQg==
+  version "0.69.12"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.69.12.tgz#c152dd0ed6fb9836aeff62016d94cfb92226b216"
+  integrity sha512-KSB92KK/mCvzK5t8O9s/FB3uX2dt5q70hoAmXW6jtLc4ehY0Oj005wXTiZctXwYWyrijTtXPTojzcQK+QyqIpg==
   dependencies:
     "@types/react" "*"
 
@@ -4358,9 +4358,9 @@ can-use-dom@^0.1.0:
   integrity sha512-ceOhN1DL7Y4O6M0j9ICgmTYziV89WMd96SvSl0REd8PMgrY0B/WBOPoed5S1KUmJqXgUXh8gzSe6E3ae27upsQ==
 
 caniuse-lite@^1.0.30000989, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001400:
-  version "1.0.30001406"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001406.tgz#d0146e7919635479f873b4507517b627f66ab269"
-  integrity sha512-bWTlaXUy/rq0BBtYShc/jArYfBPjEV95euvZ8JVtO43oQExEN/WquoqpufFjNu4kSpi5cy5kMbNvzztWDfv1Jg==
+  version "1.0.30001409"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001409.tgz#6135da9dcab34cd9761d9cdb12a68e6740c5e96e"
+  integrity sha512-V0mnJ5dwarmhYv8/MzhJ//aW68UpvnQBXv8lJ2QUsvn2pHcmAuNtu8hQEDz37XnA1iE+lRR9CIfGWWpgJ5QedQ==
 
 case-sensitive-paths-webpack-plugin@^2.2.0:
   version "2.4.0"
@@ -5529,9 +5529,9 @@ ejs@^2.7.4:
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
 electron-to-chromium@^1.3.247, electron-to-chromium@^1.4.251:
-  version "1.4.255"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.255.tgz#dc52d1095b876ed8acf25865db10265b02b1d6e1"
-  integrity sha512-H+mFNKow6gi2P5Gi2d1Fvd3TUEJlB9CF7zYaIV9T83BE3wP1xZ0mRPbNTm0KUjyd1QiVy7iKXuIcjlDtBQMiAQ==
+  version "1.4.256"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.256.tgz#c735032f412505e8e0482f147a8ff10cfca45bf4"
+  integrity sha512-x+JnqyluoJv8I0U9gVe+Sk2st8vF0CzMt78SXxuoWCooLLY2k5VerIBdpvG7ql6GKI4dzNnPjmqgDJ76EdaAKw==
 
 element-resize-detector@^1.2.1:
   version "1.2.4"
@@ -6580,9 +6580,9 @@ flatted@^3.1.0:
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
 flow-parser@0.*:
-  version "0.187.0"
-  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.187.0.tgz#a78113c7f9faea8625c31f95925269fc76cb1b0d"
-  integrity sha512-wTOuvmW6YyrcqkuLggk/GeSl65R5KQPEbxh0eAfCvlwxp8X08r+5owgZjdbLf8/typZQl/cSJL6D9vVwCkzf3g==
+  version "0.187.1"
+  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.187.1.tgz#52b2c7ebd7544b75bda0676380138bc5b3de3177"
+  integrity sha512-ZvlTeakTTMmYGukt4EIQtLEp4ie45W+jK325uukGgiqFg2Rl7TdpOJQbOLUN2xMeGS+WvXaK0uIJ3coPGDXFGQ==
 
 flow-parser@^0.121.0:
   version "0.121.0"
