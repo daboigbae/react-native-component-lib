@@ -13,6 +13,9 @@ utils - for all helper functions
 
 
 #### Running sample project 🏃‍♀️ 🏃‍♀️ 🏃‍♀️ 🏃‍♀️ 🏃‍♀️
+
+Go to `package.json` and change the following `"main": "node_modules/expo/AppEntry.js",`
+
 ##### iOS
 Take the following steps to run the application locally for iOS
 
@@ -33,3 +36,7 @@ To use this component lib inside your project
 1. Install and configure (nativewind)[https://www.nativewind.dev/]
 2. run `yarn add @digital-art-dealers/react-native-component-lib` in your project
 3. add `node_modules/@digital-art-dealers/react-native-component-lib/**/*.{js,jsx,ts,tsx}` to your `tailwind.config.js`
+
+
+#### Publishing Guide
+Go to `package.json` and change the following `"main": "src/index.ts",`
