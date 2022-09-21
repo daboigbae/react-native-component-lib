@@ -12,7 +12,7 @@ styles - shared styling
 utils - for all helper functions
 
 
-#### Running the project 🏃‍♀️ 🏃‍♀️ 🏃‍♀️ 🏃‍♀️ 🏃‍♀️
+#### Running sample project 🏃‍♀️ 🏃‍♀️ 🏃‍♀️ 🏃‍♀️ 🏃‍♀️
 ##### iOS
 Take the following steps to run the application locally for iOS
 
@@ -25,3 +25,11 @@ If you run into any issues, please make sure your development environment is set
 
 If your android app runs, but it can't connect to the react native server
 - Run `adb reverse tcp:8081 tcp:8081` then try running the app again
+
+#### Integration Guide
+
+To use this component lib inside your project
+
+1. make sure you are part of the `@digital-art-dealers` on NPM 
+2. run `npm login` on your terminal to authenticate your NPM credentials
+2. run `yarn add @digital-art-dealers/react-native-component-lib` in your project
