@@ -1,6 +1,6 @@
 {
   "name": "@digital-art-dealers/react-native-component-lib",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "src/index.ts",
   "scripts": {
     "start": "expo start",
