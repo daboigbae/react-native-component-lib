@@ -1,7 +1,8 @@
 {
   "name": "@digital-art-dealers/react-native-component-lib",
   "version": "1.0.9",
-  "main": "./src/index.ts",
+  "main": "node_modules/expo/AppEntry.js",
+
   "title": "React Native Component Lib",
   "scripts": {
     "start": "expo start",

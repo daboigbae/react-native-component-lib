@@ -1,13 +1,14 @@
 // Button.stories.js
 
 import React from "react";
+
 import { action } from "@storybook/addon-actions";
 import {text, select} from "@storybook/addon-knobs";
 
 import { storiesOf } from "@storybook/react-native";
 
-import { View } from "react-native";
-import Button from ".";
+import { View, Text } from "react-native";
+import Button from "../../../components/Button";
 
 import { 
 	BACKGROUND_COLORS, 
@@ -16,7 +17,7 @@ import {
 	DEFAULT_BACKGROUND_COLOR,
 	DEFAULT_BORDER_COLOR, 
 	DEFAULT_TEXT_COLOR, TEXT_COLORS 
-} from "../../consts";
+} from "../../../consts";
 
 storiesOf("Buttons", module)
 	.addDecorator((getStory) => <View className="w-full h-full items-center justify-center">{getStory()}</View>)
@@ -25,7 +26,7 @@ storiesOf("Buttons", module)
 			<Button
 				label={(text("label", "Button Label"))} 
 				onPress={action("clicked-text")}
-				buttonClassName="w-full h-12 bg-yellow-500 justify-center px-4"
+				buttonClassName="w-full h-32 bg-yellow-500 justify-center px-4 items-center"
 				textClassName="text-black"/>
 		</View>
 	))
@@ -53,4 +54,15 @@ storiesOf("Buttons", module)
 				onPress={action("clicked-text")}
 				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}/>
 		</View>
-	));
+	))
+	.add("Button with Icons", () => (
+		<View className="w-full px-4">
+			<Button.Icon
+				label={"asdfasdf"}
+				onPress={action("clicked-text")}
+				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}
+				leftIcon={<Text>Icon</Text>}
+				rightIcon={<Text>Icon</Text>}
+				/>
+		</View>
+	));;
