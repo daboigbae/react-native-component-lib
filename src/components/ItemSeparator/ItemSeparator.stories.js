@@ -6,7 +6,7 @@ import { View, Text, FlatList } from "react-native";
 import ItemSeparator from ".";
 
 import {select} from "@storybook/addon-knobs";
-import { BORDER_COLORS, COLORS_GROUP_ID, DEFAULT_BORDER_COLOR } from "../../../storybook/stories/consts";
+import { BORDER_COLORS, COLORS_GROUP_ID, DEFAULT_BORDER_COLOR } from "../../consts";
 
 const SONGS  = [{
 	artist: "Gucci Mane", 
