@@ -13,12 +13,12 @@ export const BORDER_COLORS = {
 };
 
 export const TEXT_COLORS = {
+	"text-black": "text-black",
+	"text-white": "text-white",
 	"text-red-500": "text-red-500",
-	"text-blue-500": "text-blue-500",
-	"text-yellow-500": "text-yellow-500",
 };
 
 export const COLORS_GROUP_ID = "Colors";
 export const DEFAULT_BACKGROUND_COLOR = "bg-red-500";
 export const DEFAULT_BORDER_COLOR = "border-red-500";
-export const DEFAULT_TEXT_COLOR = "text-red-500";
+export const DEFAULT_TEXT_COLOR = "text-black";

@@ -3,32 +3,27 @@ import React from "react";
 export interface ButtonType {
 	label: string;
 	onPress: () => void;
-	buttonClassName?: string;
-	textClassName?: string;
+	buttonColor: string;
+	textColor: string;
 	disabled?: boolean;
-}
-
-export interface PrimaryButtonType { 
-	backgroundColor: string;
-	textColor?: string;
-	label: string;
-	onPress: () => void;
-	disabled?: boolean;
+	isLoading?: boolean;
 }
 
 export interface OutlineButtonType {
-	borderColor: string;
+	buttonColor: string;
 	textColor: string;
 	label: string;
 	onPress: () => void;
 	disabled?: boolean;
+	isLoading?: boolean;
 }
 
 export interface TextButtonType {
-	textColor?: string;
+	textColor: string;
 	label: string;
 	onPress: () => void;
 	disabled?: boolean;
+	isLoading?: boolean;
 }
 
 export interface IconButtonType {
@@ -39,4 +34,5 @@ export interface IconButtonType {
 	leftIcon?: React.ReactNode;
 	rightIcon?: React.ReactNode;
 	disabled?: boolean;
+	isLoading?: boolean;
 }

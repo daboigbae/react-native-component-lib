@@ -24,26 +24,17 @@ storiesOf("Buttons", module)
 	.add("Button", () => (
 		<View className="w-full px-4">
 			<Button
-				label={(text("label", "Button Label"))} 
-				onPress={action("clicked-text")}
-				buttonClassName="w-full h-32 bg-yellow-500 justify-center px-4 items-center"
-				textClassName="text-black"
-				disabled={boolean("Disabled", false)}/>
-		</View>
-	))
-	.add("Primary Button", () => (
-		<View className="w-full px-4">
-			<Button.Primary
 				label={(text("label", "Button Label"))}
 				onPress={action("clicked-text")}
-				backgroundColor={select(
+				buttonColor={select(
 					"backgroundColor", 
 					BACKGROUND_COLORS,
 					DEFAULT_BACKGROUND_COLOR, 
 					COLORS_GROUP_ID)
 				}
+				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}
+				isLoading={boolean("isLoading", false)}
 				disabled={boolean("Disabled", false)}/>
-				
 		</View>
 	))
 	.add("Ouline Button", () => (
@@ -51,9 +42,11 @@ storiesOf("Buttons", module)
 			<Button.Outline
 				label={(text("label", "Button Label"))}
 				onPress={action("clicked-text")}
-				borderColor={select("borderColor", BORDER_COLORS, DEFAULT_BORDER_COLOR, COLORS_GROUP_ID)}
+				buttonColor={select("borderColor", BORDER_COLORS, DEFAULT_BORDER_COLOR, COLORS_GROUP_ID)}
 				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}
-				disabled={boolean("Disabled", false)}/>
+				disabled={boolean("Disabled", false)}
+				isLoading={boolean("isLoading", false)}
+				/>
 		</View>
 	))
 	.add("Text Button", () => (
@@ -62,7 +55,9 @@ storiesOf("Buttons", module)
 				label={(text("label", "Button Label"))}
 				onPress={action("clicked-text")}
 				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}
-				disabled={boolean("Disabled", false)}/>
+				disabled={boolean("Disabled", false)}
+				isLoading={boolean("isLoading", false)}
+				/>
 		</View>
 	))
 	.add("Button with Icons", () => (
@@ -74,6 +69,7 @@ storiesOf("Buttons", module)
 				leftIcon={<Text>Icon</Text>}
 				rightIcon={<Text>Icon</Text>}
 				disabled={boolean("Disabled", false)}
+				isLoading={boolean("isLoading", false)}
 				/>
 		</View>
 	));;
