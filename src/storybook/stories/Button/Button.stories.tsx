@@ -3,7 +3,7 @@
 import React from "react";
 
 import { action } from "@storybook/addon-actions";
-import {text, select} from "@storybook/addon-knobs";
+import {text, select, boolean} from "@storybook/addon-knobs";
 
 import { storiesOf } from "@storybook/react-native";
 
@@ -27,7 +27,8 @@ storiesOf("Buttons", module)
 				label={(text("label", "Button Label"))} 
 				onPress={action("clicked-text")}
 				buttonClassName="w-full h-32 bg-yellow-500 justify-center px-4 items-center"
-				textClassName="text-black"/>
+				textClassName="text-black"
+				disabled={boolean("Disabled", false)}/>
 		</View>
 	))
 	.add("Primary Button", () => (
@@ -35,7 +36,14 @@ storiesOf("Buttons", module)
 			<Button.Primary
 				label={(text("label", "Button Label"))}
 				onPress={action("clicked-text")}
-				backgroundColor={select("backgroundColor", BACKGROUND_COLORS, DEFAULT_BACKGROUND_COLOR, COLORS_GROUP_ID)}/>
+				backgroundColor={select(
+					"backgroundColor", 
+					BACKGROUND_COLORS,
+					DEFAULT_BACKGROUND_COLOR, 
+					COLORS_GROUP_ID)
+				}
+				disabled={boolean("Disabled", false)}/>
+				
 		</View>
 	))
 	.add("Ouline Button", () => (
@@ -44,7 +52,8 @@ storiesOf("Buttons", module)
 				label={(text("label", "Button Label"))}
 				onPress={action("clicked-text")}
 				borderColor={select("borderColor", BORDER_COLORS, DEFAULT_BORDER_COLOR, COLORS_GROUP_ID)}
-				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}/>
+				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}
+				disabled={boolean("Disabled", false)}/>
 		</View>
 	))
 	.add("Text Button", () => (
@@ -52,7 +61,8 @@ storiesOf("Buttons", module)
 			<Button.Text
 				label={(text("label", "Button Label"))}
 				onPress={action("clicked-text")}
-				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}/>
+				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}
+				disabled={boolean("Disabled", false)}/>
 		</View>
 	))
 	.add("Button with Icons", () => (
@@ -63,6 +73,7 @@ storiesOf("Buttons", module)
 				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}
 				leftIcon={<Text>Icon</Text>}
 				rightIcon={<Text>Icon</Text>}
+				disabled={boolean("Disabled", false)}
 				/>
 		</View>
 	));;

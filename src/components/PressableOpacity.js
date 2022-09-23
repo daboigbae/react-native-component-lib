@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 
 import useAnimation from "../hooks/useAnimation";
 
-const PressableOpacity = ({ children, onPress }) => {
+const PressableOpacity = ({ children, onPress, disabled = false }) => {
 	const {
 		fadeIn,
 		fadeOut,
@@ -21,7 +21,8 @@ const PressableOpacity = ({ children, onPress }) => {
 			onPressIn={fadeIn}
 			onPressOut={fadeOut}
 			className="w-full h-auto relative"
-			onPress={onPress}>
+			onPress={onPress}
+			disabled={disabled}>
 			{children}
 			<Animated.View
 				className="w-full h-full absolute top-0 left-0 bg-gray-100 "
@@ -32,7 +33,8 @@ const PressableOpacity = ({ children, onPress }) => {
 
 PressableOpacity.propTypes = {
 	children: PropTypes.object.isRequired,
-	onPress: PropTypes.func.isRequired
+	onPress: PropTypes.func.isRequired, 
+	disabled: PropTypes.bool
 };
 
 export default PressableOpacity;

@@ -5,6 +5,7 @@ export interface ButtonType {
 	onPress: () => void;
 	buttonClassName?: string;
 	textClassName?: string;
+	disabled?: boolean;
 }
 
 export interface PrimaryButtonType { 
@@ -12,6 +13,7 @@ export interface PrimaryButtonType {
 	textColor?: string;
 	label: string;
 	onPress: () => void;
+	disabled?: boolean;
 }
 
 export interface OutlineButtonType {
@@ -19,12 +21,14 @@ export interface OutlineButtonType {
 	textColor: string;
 	label: string;
 	onPress: () => void;
+	disabled?: boolean;
 }
 
 export interface TextButtonType {
 	textColor?: string;
 	label: string;
 	onPress: () => void;
+	disabled?: boolean;
 }
 
 export interface IconButtonType {
@@ -34,4 +38,5 @@ export interface IconButtonType {
 	label: string; 
 	leftIcon?: React.ReactNode;
 	rightIcon?: React.ReactNode;
+	disabled?: boolean;
 }

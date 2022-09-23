@@ -25,38 +25,61 @@ const Button: React.FC<ButtonType> & {
 } = ({
 	label, 
 	onPress, 
-	buttonClassName = "w-full h-14 px-4 items-center justify-center rounded-md bg-pink-500", 
+	buttonClassName = "w-full h-14 px-4 items-center justify-center rounded-md bg-pink-500 ", 
 	textClassName = "text-white",
+	disabled = false,
 }) => {
+	
 	return (
-		<PressableOpacity onPress={onPress}>
-			<View className={buttonClassName}>
+		<PressableOpacity onPress={onPress} disabled={disabled}>
+			<View className={buttonClassName.concat(disabled ? " opacity-50" : " opacity-100")}>
 				<Text className={textClassName}>{label}</Text>
 			</View>
+
 		</PressableOpacity>
 	);
 };
 
-const Primary: React.FC<PrimaryButtonType> = ({backgroundColor, textColor, label, onPress}) => 
+const Primary: React.FC<PrimaryButtonType> = ({
+	backgroundColor, 
+	textColor, 
+	label, 
+	onPress, 
+	disabled = false,
+}) => 
 	<Button 
 		label={label}
 		onPress={onPress}
 		buttonClassName={BASE_BUTTON_CLASS_NAME.concat(backgroundColor)} 
-		textClassName={textColor}/>;
+		textClassName={textColor}
+		disabled={disabled}/>;
 
-const Outline: React.FC<OutlineButtonType> = ({borderColor, textColor, label, onPress}) => 
+const Outline: React.FC<OutlineButtonType> = ({
+	borderColor, 
+	textColor, 
+	label, 
+	onPress, 
+	disabled = false,
+}) => 
 	<Button 
 		label={label}
 		onPress={onPress}
 		buttonClassName={BASE_BUTTON_CLASS_NAME.concat("bg-transparent border-2 ").concat(borderColor)} 
-		textClassName={textColor}/>;
+		textClassName={textColor}
+		disabled={disabled}/>;
 
-const TextButton: React.FC<TextButtonType> = ({label, textColor, onPress}) => 
+const TextButton: React.FC<TextButtonType> = ({
+	label, 
+	textColor,
+	onPress, 
+	disabled = false,
+	}) => 
 	<Button
 		label={label}
 		onPress={onPress}
 		buttonClassName={BASE_BUTTON_CLASS_NAME.concat("bg-transparent")} 
-		textClassName={textColor}/>;
+		textClassName={textColor}
+		disabled={disabled}/>;
 
 const IconButton: React.FC<IconButtonType> = ({
 	backgroundColor = "bg-pink-500", 
@@ -64,10 +87,11 @@ const IconButton: React.FC<IconButtonType> = ({
 	onPress, 
 	label, 
 	leftIcon,
-	rightIcon
+	rightIcon, 
+	disabled = false,
 }) => (
-	<PressableOpacity onPress={onPress}>
-		<View className={backgroundColor.concat(" flex-row justify-between w-full h-14 px-4 items-center rounded-md")}>
+	<PressableOpacity onPress={onPress} disabled={disabled}>
+		<View className={backgroundColor.concat(" flex-row justify-between w-full h-14 px-4 items-center rounded-md").concat(disabled ? " opacity-50" : " opacity-100")}>
 			<View className="w-4">{leftIcon && leftIcon}</View>
 			<View className="bg-black">
 				<Text className={textColor}>{label}</Text>
