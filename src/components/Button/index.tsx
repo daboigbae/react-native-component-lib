@@ -9,6 +9,7 @@ import PressableOpacity from "../PressableOpacity";
 
 import { 
 	ButtonType, 
+	IconButtonType, 
 	OutlineButtonType, 
 	PrimaryButtonType, 
 	TextButtonType 
@@ -20,10 +21,11 @@ const Button: React.FC<ButtonType> & {
 	Primary: React.FC<PrimaryButtonType>;
 	Outline: React.FC<OutlineButtonType>; 
 	Text: React.FC<TextButtonType>;
+	Icon: React.FC<IconButtonType>;
 } = ({
 	label, 
 	onPress, 
-	buttonClassName = "w-full p-4 items-center justify-center rounded-md bg-pink-500", 
+	buttonClassName = "w-full h-14 px-4 items-center justify-center rounded-md bg-pink-500", 
 	textClassName = "text-white",
 }) => {
 	return (
@@ -56,8 +58,28 @@ const TextButton: React.FC<TextButtonType> = ({label, textColor, onPress}) =>
 		buttonClassName={BASE_BUTTON_CLASS_NAME.concat("bg-transparent")} 
 		textClassName={textColor}/>;
 
+const IconButton: React.FC<IconButtonType> = ({
+	backgroundColor = "bg-pink-500", 
+	textColor, 
+	onPress, 
+	label, 
+	leftIcon,
+	rightIcon
+}) => (
+	<PressableOpacity onPress={onPress}>
+		<View className={backgroundColor.concat(" flex-row justify-between w-full h-14 px-4 items-center rounded-md")}>
+			<View className="w-4">{leftIcon && leftIcon}</View>
+			<View className="bg-black">
+				<Text className={textColor}>{label}</Text>
+			</View>
+			<View className="w-4">{rightIcon && rightIcon}</View>
+		</View>
+	</PressableOpacity>
+)
+
 Button.Primary = Primary; 
 Button.Outline = Outline;
 Button.Text = TextButton; 
+Button.Icon = IconButton;
 
 export default Button;
