@@ -6,7 +6,7 @@ export interface ButtonType {
 }
 
 export interface PrimaryButtonType { 
-	backgroundColor?: string;
+	backgroundColor: string;
 	textColor?: string;
 	label: string;
 	onPress: () => void;
