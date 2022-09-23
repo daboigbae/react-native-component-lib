@@ -1,2 +1,2 @@
-import "../../components/Button/Button.stories";
-import "../../components/ItemSeparator/ItemSeparator.stories";
+import "./Button/Button.stories";
+import "./ItemSeparator/ItemSeparator.stories";
