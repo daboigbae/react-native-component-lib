@@ -1,6 +1,6 @@
 {
   "name": "@digital-art-dealers/react-native-component-lib",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "./src/index.ts",
   "title": "React Native Component Lib",
   "scripts": {
