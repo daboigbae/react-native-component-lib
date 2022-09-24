@@ -4,7 +4,6 @@
     "strict": true
   }, 
   "exclude": [
-    "src/**/*.test.tsx",
-    "src/**/*.stories.tsx",
+	"storybook"
   ],
 }

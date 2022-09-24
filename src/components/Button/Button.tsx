@@ -1,3 +1,5 @@
+/// <reference types="nativewind/types" />
+
 import React from "react"; 
 
 import { 

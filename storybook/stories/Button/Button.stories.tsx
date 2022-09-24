@@ -8,16 +8,11 @@ import {text, select} from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react-native";
 
 import { View, Text } from "react-native";
-import Button from "../../../components/Button";
 
-import { 
-	BACKGROUND_COLORS, 
-	BORDER_COLORS, 
-	COLORS_GROUP_ID, 
-	DEFAULT_BACKGROUND_COLOR,
-	DEFAULT_BORDER_COLOR, 
-	DEFAULT_TEXT_COLOR, TEXT_COLORS 
-} from "../../../consts";
+
+import { Button } from "../../../src";
+import { BACKGROUND_COLORS, BORDER_COLORS, COLORS_GROUP_ID, DEFAULT_BACKGROUND_COLOR, DEFAULT_BORDER_COLOR, DEFAULT_TEXT_COLOR, TEXT_COLORS } from "../../consts";
+
 
 storiesOf("Buttons", module)
 	.addDecorator((getStory) => <View className="w-full h-full items-center justify-center">{getStory()}</View>)
