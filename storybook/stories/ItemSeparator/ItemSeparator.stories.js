@@ -3,10 +3,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react-native";
 import { View, Text, FlatList } from "react-native";
-import ItemSeparator from "../../../components/ItemSeparator";
+import ItemSeparator from "../../../src/components/ItemSeparator";
 
 import {select} from "@storybook/addon-knobs";
-import { BORDER_COLORS, COLORS_GROUP_ID, DEFAULT_BORDER_COLOR } from "../../../consts";
+import { BORDER_COLORS, COLORS_GROUP_ID, DEFAULT_BORDER_COLOR } from "../../consts";
 
 const SONGS  = [{
 	artist: "Gucci Mane", 

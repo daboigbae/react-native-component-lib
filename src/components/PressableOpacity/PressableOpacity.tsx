@@ -3,12 +3,13 @@ import React from "react";
 import {
 	Pressable,
 	Animated,
+	StyleSheet
 } from "react-native";
 
 import useAnimation from "../../hooks/useAnimation";
 import { PressableOpacityTypes } from "./PressableOpacity.types";
 
-const PressableOpacity: React.FC<PressableOpacityTypes> = ({ children, onPress }) => {
+const PressableOpacity = ({ children, ...props }: PressableOpacityTypes) => {
 	const {
 		fadeIn,
 		fadeOut,
@@ -19,14 +20,32 @@ const PressableOpacity: React.FC<PressableOpacityTypes> = ({ children, onPress }
 		<Pressable
 			onPressIn={fadeIn}
 			onPressOut={fadeOut}
-			className="w-full h-auto relative"
-			onPress={onPress}>
-			{children}
-			<Animated.View
-				className="w-full h-full absolute top-0 left-0 bg-gray-100 "
-				style={{ opacity: opacityValue }} />
+			style={style.pressableContainer}
+			{...props}>
+				{children}
+				<Animated.View
+					style={[style.animatedView, {opacity: opacityValue}]} />
+
 		</Pressable>
 	);
 };
 
-export default PressableOpacity;
+const style = StyleSheet.create({
+	pressableContainer: {
+		width: '100%', 
+		position: 'relative',
+		justifyContent: 'center', 
+		alignItems: 'center', 
+	}, 
+	animatedView: {
+		position: 'absolute', 
+		left: 0, 
+		top: 0, 
+		width: '100%', 
+		height: '100%', 
+		backgroundColor: 'gray', 
+		borderRadius: 4
+	}
+})
+
+export default PressableOpacity

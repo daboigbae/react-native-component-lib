@@ -1,6 +1,6 @@
 import React from 'react'; 
+import { PressableProps } from 'react-native';
 
-export interface PressableOpacityTypes {
+export interface PressableOpacityTypes extends PressableProps {
 	children: React.ReactNode;
-	onPress: () => void;
-}
+  }

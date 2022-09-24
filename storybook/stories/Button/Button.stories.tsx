@@ -8,10 +8,7 @@ import {text, select} from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react-native";
 
 import { View, Text } from "react-native";
-
-
 import { Button } from "../../../src";
-import { BACKGROUND_COLORS, BORDER_COLORS, COLORS_GROUP_ID, DEFAULT_BACKGROUND_COLOR, DEFAULT_BORDER_COLOR, DEFAULT_TEXT_COLOR, TEXT_COLORS } from "../../consts";
 
 
 storiesOf("Buttons", module)
@@ -21,43 +18,7 @@ storiesOf("Buttons", module)
 			<Button
 				label={(text("label", "Button Label"))} 
 				onPress={action("clicked-text")}
-				buttonClassName="w-full h-32 bg-yellow-500 justify-center px-4 items-center"
-				textClassName="text-black"/>
+				buttonStyle="font-bold text-white"
+				textStyle=""/>
 		</View>
 	))
-	.add("Primary Button", () => (
-		<View className="w-full px-4">
-			<Button.Primary
-				label={(text("label", "Button Label"))}
-				onPress={action("clicked-text")}
-				backgroundColor={select("backgroundColor", BACKGROUND_COLORS, DEFAULT_BACKGROUND_COLOR, COLORS_GROUP_ID)}/>
-		</View>
-	))
-	.add("Ouline Button", () => (
-		<View className="w-full px-4">
-			<Button.Outline
-				label={(text("label", "Button Label"))}
-				onPress={action("clicked-text")}
-				borderColor={select("borderColor", BORDER_COLORS, DEFAULT_BORDER_COLOR, COLORS_GROUP_ID)}
-				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}/>
-		</View>
-	))
-	.add("Text Button", () => (
-		<View className="w-full px-4">
-			<Button.Text
-				label={(text("label", "Button Label"))}
-				onPress={action("clicked-text")}
-				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}/>
-		</View>
-	))
-	.add("Button with Icons", () => (
-		<View className="w-full px-4">
-			<Button.Icon
-				label={"asdfasdf"}
-				onPress={action("clicked-text")}
-				textColor={select("textColor", TEXT_COLORS, DEFAULT_TEXT_COLOR, COLORS_GROUP_ID)}
-				leftIcon={<Text>Icon</Text>}
-				rightIcon={<Text>Icon</Text>}
-				/>
-		</View>
-	));;
