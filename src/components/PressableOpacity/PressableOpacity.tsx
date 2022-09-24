@@ -5,11 +5,10 @@ import {
 	Animated,
 } from "react-native";
 
-import PropTypes from "prop-types";
+import useAnimation from "../../hooks/useAnimation";
+import { PressableOpacityTypes } from "./PressableOpacity.types";
 
-import useAnimation from "../hooks/useAnimation";
-
-const PressableOpacity = ({ children, onPress }) => {
+const PressableOpacity: React.FC<PressableOpacityTypes> = ({ children, onPress }) => {
 	const {
 		fadeIn,
 		fadeOut,
@@ -28,11 +27,6 @@ const PressableOpacity = ({ children, onPress }) => {
 				style={{ opacity: opacityValue }} />
 		</Pressable>
 	);
-};
-
-PressableOpacity.propTypes = {
-	children: PropTypes.object.isRequired,
-	onPress: PropTypes.func.isRequired
 };
 
 export default PressableOpacity;

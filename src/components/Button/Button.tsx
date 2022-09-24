@@ -5,7 +5,7 @@ import {
 	View, 
 } from "react-native";
 
-import PressableOpacity from "../PressableOpacity";
+import PressableOpacity from "../PressableOpacity/PressableOpacity";
 
 import { 
 	ButtonType, 
@@ -13,7 +13,7 @@ import {
 	OutlineButtonType, 
 	PrimaryButtonType, 
 	TextButtonType 
-} from "./types";
+} from "./Button.types";
 
 const BASE_BUTTON_CLASS_NAME = 'w-full p-4 items-center justify-center rounded-md '
 

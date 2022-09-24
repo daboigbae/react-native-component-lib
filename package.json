@@ -2,7 +2,6 @@
   "name": "@digital-art-dealers/react-native-component-lib",
   "version": "1.0.9",
   "main": "node_modules/expo/AppEntry.js",
-
   "title": "React Native Component Lib",
   "scripts": {
     "start": "expo start",
@@ -51,9 +50,9 @@
     "tailwindcss": "^3.1.8",
     "typescript": "~4.3.5"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@react-native-async-storage/async-storage": "~1.17.3",
-    "expo": "~46.0.9",
+    "expo": "^46.0.10",
     "expo-status-bar": "~1.4.0",
     "expo-updates": "~0.14.5",
     "husky": "^8.0.1",
