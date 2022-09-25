@@ -18,7 +18,8 @@ const Button: React.FC<ButtonType>= ({
 	buttonColor,
 	textColor, 
 	onPress, 
-	type = "primary"
+	type = "primary", 
+	disabled = false
 }) => {
 	const generateButtonStyle = (borderColor: { backgroundColor?: string | undefined} | undefined, type: string): object => {
 		if (type === 'outlined') {
@@ -33,7 +34,7 @@ const Button: React.FC<ButtonType>= ({
 	const generatedStyle = generateButtonStyle(buttonColor?.[0], type); 
 
 	return (
-		<PressableOpacity onPress={onPress}>
+		<PressableOpacity onPress={onPress} disabled={disabled}>
 			<View style={generatedStyle}>
 				<Text style={textColor}>{label}</Text>
 			</View>

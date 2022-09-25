@@ -3,7 +3,7 @@
 import React from "react";
 
 import { action } from "@storybook/addon-actions";
-import {text, select} from "@storybook/addon-knobs";
+import {text, select, boolean} from "@storybook/addon-knobs";
 
 import { storiesOf } from "@storybook/react-native";
 
@@ -19,7 +19,8 @@ storiesOf("Buttons", module)
 					label={(text("label", "Button Label"))} 
 					onPress={action("clicked-text")}
 					buttonColor="bg-green-700"
-					textColor="text-white"/>
+					textColor="text-white"
+					disabled={boolean("Disabled?", false)}/>
 			</View>
 		)}
 	)

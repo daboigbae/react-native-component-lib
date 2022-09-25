@@ -5,4 +5,5 @@ export interface ButtonType {
 	textStyle?: object,
 	onPress: () => void;
 	type?: 'text' | 'outlined' | 'primary'; 
+	disabled?: boolean;
 }

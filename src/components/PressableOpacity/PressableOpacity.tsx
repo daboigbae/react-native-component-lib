@@ -24,8 +24,7 @@ const PressableOpacity = ({ children, ...props }: PressableOpacityTypes) => {
 			{...props}>
 				{children}
 				<Animated.View
-					style={[style.animatedView, {opacity: opacityValue}]} />
-
+					style={[style.animatedView, {opacity: props?.disabled ? .7 : opacityValue}]} />
 		</Pressable>
 	);
 };
