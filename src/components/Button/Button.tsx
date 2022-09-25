@@ -12,6 +12,7 @@ import PressableOpacity from "../PressableOpacity";
 import { 
 	ButtonType, 
 } from "./Button.types";
+import Loader from "../Loader";
 
 const Button: React.FC<ButtonType>= ({
 	label, 
@@ -19,7 +20,8 @@ const Button: React.FC<ButtonType>= ({
 	textColor, 
 	onPress, 
 	type = "primary", 
-	disabled = false
+	disabled = false, 
+	isLoading = false
 }) => {
 	const generateButtonStyle = (borderColor: { backgroundColor?: string | undefined} | undefined, type: string): object => {
 		if (type === 'outlined') {
@@ -30,13 +32,15 @@ const Button: React.FC<ButtonType>= ({
 			return {...style.baseButton, ...borderColor}
 		}
 	}
-
 	const generatedStyle = generateButtonStyle(buttonColor?.[0], type); 
 
 	return (
-		<PressableOpacity onPress={onPress} disabled={disabled}>
+		<PressableOpacity onPress={onPress} disabled={disabled} isLoading={isLoading}>
 			<View style={generatedStyle}>
-				<Text style={textColor}>{label}</Text>
+				{isLoading ?
+					<Loader color={textColor?.[0]?.color}/> : 
+					<Text style={textColor}>{label}</Text>
+				}
 			</View>
 		</PressableOpacity>
 	);

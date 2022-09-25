@@ -20,7 +20,8 @@ storiesOf("Buttons", module)
 					onPress={action("clicked-text")}
 					buttonColor="bg-green-700"
 					textColor="text-white"
-					disabled={boolean("Disabled?", false)}/>
+					disabled={boolean("Disabled?", false)}
+					isLoading={boolean("Is Loading?", false)}/>
 			</View>
 		)}
 	)
@@ -32,7 +33,9 @@ storiesOf("Buttons", module)
 					onPress={action("clicked-text")}
 					buttonColor="bg-green-700"
 					textColor="text-green-700"
-					type="outlined"/>
+					type="outlined"
+					disabled={boolean("Disabled?", false)}
+					isLoading={boolean("Is Loading?", false)}/>
 			</View>
 		)}
 	)
@@ -43,7 +46,9 @@ storiesOf("Buttons", module)
 					label={(text("label", "Button Label"))} 
 					onPress={action("clicked-text")}
 					textColor="text-green-700"
-					type="text"/>
+					type="text"
+					disabled={boolean("Disabled?", false)}
+					isLoading={boolean("Is Loading?", false)}/>
 			</View>
 		)}
 	)

@@ -9,7 +9,7 @@ import {
 import useAnimation from "./useAnimation";
 import { PressableOpacityTypes } from "./PressableOpacity.types";
 
-const PressableOpacity = ({ children, ...props }: PressableOpacityTypes) => {
+const PressableOpacity = ({ children, isLoading, ...props }: PressableOpacityTypes) => {
 	const {
 		fadeIn,
 		fadeOut,
@@ -23,8 +23,9 @@ const PressableOpacity = ({ children, ...props }: PressableOpacityTypes) => {
 			style={style.pressableContainer}
 			{...props}>
 				{children}
-				<Animated.View
-					style={[style.animatedView, {opacity: props?.disabled ? .7 : opacityValue}]} />
+				{!isLoading && <Animated.View
+					style={[style.animatedView, {opacity: props?.disabled ? .4 : opacityValue}]} />
+				}
 		</Pressable>
 	);
 };

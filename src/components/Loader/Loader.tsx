@@ -1,25 +1,32 @@
-import { styled } from "nativewind";
 import React from "react"; 
 
 import { 
 	ActivityIndicator,
 	View, 
+	StyleSheet
 } from "react-native";
 
+import { styled } from "nativewind";
+
 interface LoaderType {
-	color?:  [{backgroundColor?: string | undefined}];
+	color?:  string;
 }
 
 const Loader: React.FC<LoaderType> = ({
-	color = [{backgroundColor: 'black'}],
-}) => {
-	console.log('color', color)
-	return (
+	color = "#000000"
+}) => (
 		<View className="w-full h-full items-center justify-center">
-			<ActivityIndicator size="large" color={color?.[0]?.backgroundColor}/>
+			<ActivityIndicator size="small" color={color}/>
 		</View>
 	);
-};
+
+const style = StyleSheet.create({
+	container: {
+		justifyContent: "center",
+		alignItems: "center",
+		flex: 1, 
+	}
+})
 
 export default styled( Loader, {
 	props: {
