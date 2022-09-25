@@ -3,10 +3,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react-native";
 import { View, Text, FlatList } from "react-native";
-import ItemSeparator from "../../../src/components/ItemSeparator";
-
-import {select} from "@storybook/addon-knobs";
-import { BORDER_COLORS, COLORS_GROUP_ID, DEFAULT_BORDER_COLOR } from "../../consts";
+import { ItemSeparator } from "../../../src";
 
 const SONGS  = [{
 	artist: "Gucci Mane", 
@@ -83,14 +80,8 @@ storiesOf("Item Separator", module)
 				ItemSeparatorComponent={
 					() => 
 						<ItemSeparator 
-							borderStyle={
-								select(
-									"borderStyle", 
-									BORDER_COLORS, 
-									DEFAULT_BORDER_COLOR,
-									COLORS_GROUP_ID
-								)
-							}/>
+							separatorStyle="bg-red-500"
+						/>
 				}
 				stickyHeaderIndices={[0]}/>
 		</View>

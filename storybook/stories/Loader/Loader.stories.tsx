@@ -13,7 +13,7 @@ storiesOf("Loader ", module)
 		return (
 			<View className="w-full px-4">
 				<Loader 
-					color="bg-red-700"/>
+					color="#f00"/>
 			</View>
 		)}
 	)
