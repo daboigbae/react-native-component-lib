@@ -1,6 +1,8 @@
 export interface ButtonType {
-	label: string; 
-	buttonStyle: object;
-	textStyle: object,
+	label: string, 
+	buttonColor?: [{backgroundColor?: string | undefined}]; 
+	textColor?: object;
+	textStyle?: object,
 	onPress: () => void;
+	type?: 'text' | 'outlined' | 'primary'; 
 }

@@ -13,11 +13,29 @@ import {
 	ButtonType, 
 } from "./Button.types";
 
-const Button: React.FC<ButtonType> = ({label, buttonStyle, textStyle, onPress}) => {
+const Button: React.FC<ButtonType>= ({
+	label, 
+	buttonColor,
+	textColor, 
+	onPress, 
+	type = "primary"
+}) => {
+	const generateButtonStyle = (borderColor: { backgroundColor?: string | undefined} | undefined, type: string): object => {
+		if (type === 'outlined') {
+			return {...style.baseButton, borderColor: borderColor?.backgroundColor, ...style.outlinedButton}
+		} else if (type === 'text'){
+			return {...style.baseButton}
+		} else {
+			return {...style.baseButton, ...borderColor}
+		}
+	}
+
+	const generatedStyle = generateButtonStyle(buttonColor?.[0], type); 
+
 	return (
 		<PressableOpacity onPress={onPress}>
-			<View style={[style.baseButton, buttonStyle]}>
-				<Text style={[style.baseText, textStyle]}>{label}</Text>
+			<View style={generatedStyle}>
+				<Text style={textColor}>{label}</Text>
 			</View>
 		</PressableOpacity>
 	);
@@ -25,19 +43,22 @@ const Button: React.FC<ButtonType> = ({label, buttonStyle, textStyle, onPress}) 
 
 export default styled(Button, {
 	props: {
-	  buttonStyle: true, 
-	  textStyle: true
+		buttonColor: true, 
+		textColor: true, 
+		type: true
 	}
-})
+});
 
 const style = StyleSheet.create({
 	baseButton: {
 		height: 52, 
 		width: '100%', 
-		backgroundColor: 'pink', 
 		justifyContent: 'center', 
 		alignItems: 'center', 
 		borderRadius: 4
+	}, 
+	outlinedButton: {
+		borderWidth: 3,
 	}, 
 	baseText: {
 		color: 'white',

@@ -6,7 +6,7 @@ import {
 	StyleSheet
 } from "react-native";
 
-import useAnimation from "../../hooks/useAnimation";
+import useAnimation from "./useAnimation";
 import { PressableOpacityTypes } from "./PressableOpacity.types";
 
 const PressableOpacity = ({ children, ...props }: PressableOpacityTypes) => {
