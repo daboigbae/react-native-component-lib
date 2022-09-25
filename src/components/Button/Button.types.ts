@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ButtonType {
 	label: string, 
 	buttonColor?: [{backgroundColor?: string | undefined}]; 
@@ -7,4 +9,6 @@ export interface ButtonType {
 	type?: 'text' | 'outlined' | 'primary'; 
 	disabled?: boolean;
 	isLoading?: boolean;
+	leftIcon?: React.ReactNode; 
+	rightIcon?: React.ReactNode;
 }

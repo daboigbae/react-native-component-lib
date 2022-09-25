@@ -21,7 +21,9 @@ const Button: React.FC<ButtonType>= ({
 	onPress, 
 	type = "primary", 
 	disabled = false, 
-	isLoading = false
+	isLoading = false, 
+	leftIcon = null, 
+	rightIcon = null,
 }) => {
 	const generateButtonStyle = (borderColor: { backgroundColor?: string | undefined} | undefined, type: string): object => {
 		if (type === 'outlined') {
@@ -37,10 +39,18 @@ const Button: React.FC<ButtonType>= ({
 	return (
 		<PressableOpacity onPress={onPress} disabled={disabled} isLoading={isLoading}>
 			<View style={generatedStyle}>
+				<View style={style.iconContainer}>
+					{leftIcon && leftIcon}
+				</View>
+				<View>
 				{isLoading ?
 					<Loader color={textColor?.[0]?.color}/> : 
 					<Text style={textColor}>{label}</Text>
 				}
+				</View>
+				<View style={style.iconContainer}>
+					{rightIcon && rightIcon}
+				</View>
 			</View>
 		</PressableOpacity>
 	);
@@ -58,14 +68,20 @@ const style = StyleSheet.create({
 	baseButton: {
 		height: 52, 
 		width: '100%', 
-		justifyContent: 'center', 
+		justifyContent: 'space-between', 
 		alignItems: 'center', 
-		borderRadius: 4
+		borderRadius: 4, 
+		flexDirection: 'row'
 	}, 
 	outlinedButton: {
 		borderWidth: 3,
 	}, 
 	baseText: {
 		color: 'white',
-	}
+	}, 
+	iconContainer: {
+		width: 52,
+		height: 52, 
+	}, 
+
 })
