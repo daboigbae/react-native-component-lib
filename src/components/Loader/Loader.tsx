@@ -15,7 +15,7 @@ interface LoaderType {
 const Loader: React.FC<LoaderType> = ({
 	color = "#000000"
 }) => (
-		<View className="w-full h-full items-center justify-center">
+		<View style={style.container}>
 			<ActivityIndicator size="small" color={color}/>
 		</View>
 	);

@@ -10,7 +10,7 @@ import { ItemSeparatorType } from "./ItemSeparator.types";
 
 const ItemSeparator: React.FC<ItemSeparatorType> = ({separatorStyle}) => {
 	return (
-		<View style={[style.baseStyle, separatorStyle?.[0], ]}/>
+		<View style={[style.baseStyle, separatorStyle]}/>
 	)
 };
 
