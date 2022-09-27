@@ -9,7 +9,12 @@ import {
 import useAnimation from "./useAnimation";
 import { PressableOpacityTypes } from "./PressableOpacity.types";
 
-const PressableOpacity = ({ children, isLoading, ...props }: PressableOpacityTypes) => {
+const PressableOpacity = ({ 
+	children, 
+	isLoading, 
+	disabled, 
+	customStyle 
+}: PressableOpacityTypes) => {
 	const {
 		fadeIn,
 		fadeOut,
@@ -18,13 +23,13 @@ const PressableOpacity = ({ children, isLoading, ...props }: PressableOpacityTyp
 
 	return (
 		<Pressable
+			disabled={disabled}
 			onPressIn={fadeIn}
 			onPressOut={fadeOut}
-			style={style.pressableContainer}
-			{...props}>
+			style={[style.pressableContainer, customStyle]}>
 				{children}
 				{!isLoading && <Animated.View
-					style={[style.animatedView, {opacity: props?.disabled ? .4 : opacityValue}]} />
+					style={[style.animatedView, {opacity: disabled ? .6 : opacityValue}]} />
 				}
 		</Pressable>
 	);
@@ -32,7 +37,6 @@ const PressableOpacity = ({ children, isLoading, ...props }: PressableOpacityTyp
 
 const style = StyleSheet.create({
 	pressableContainer: {
-		width: '100%', 
 		position: 'relative',
 		justifyContent: 'center', 
 		alignItems: 'center', 
@@ -41,8 +45,8 @@ const style = StyleSheet.create({
 		position: 'absolute', 
 		left: 0, 
 		top: 0, 
-		width: '100%', 
-		height: '100%', 
+		right: 0,
+		bottom: 0,
 		backgroundColor: 'gray', 
 		borderRadius: 4
 	}

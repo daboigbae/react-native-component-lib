@@ -68,3 +68,18 @@ storiesOf("Buttons", module)
 			</View>
 		)}
 	)
+	.add("Custom Button", () => {
+		return (
+			<View className="w-full px-4">
+				<Button
+					label={(text("label", "Button Label"))} 
+					onPress={action("clicked-text")}
+					buttonColor="bg-green-700"
+					textColor="text-white"
+					disabled={boolean("Disabled?", false)}
+					isLoading={boolean("Is Loading?", false)}
+					customButtonStyle="rounded-full px-2 py-1 bg-purple-200 w-32 justify-center items-center"
+					customTextStyle="text-black"/>
+			</View>
+		)}
+	)
