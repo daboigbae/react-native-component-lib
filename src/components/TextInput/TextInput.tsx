@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { 
 	View,
 	Text,
-	TextInput,
+	TextInput as FormInput,
 	TextInputProps,
 } from "react-native";
 import Error from "../Error/Error";
@@ -11,7 +11,7 @@ import Error from "../Error/Error";
 import { FormInputType } from "./TextInput.types";
 import { generateOptions } from "./TextInput.utils";
 
-const FormInput: React.FC<FormInputType & TextInputProps> = ({
+const TextInput: React.FC<FormInputType & TextInputProps> = ({
 	type,
 	label,
 	onChangeText,
@@ -49,7 +49,7 @@ const FormInput: React.FC<FormInputType & TextInputProps> = ({
 		<View className="w-full align-top">
 			{renderLabel()}
 			<View className="w-full h-12 items-center justify-center relative">
-				<TextInput
+				<FormInput
 					className="w-full  h-12 px-2 border border-gray-300 rounded-lg"
 					onChangeText={handleTextChange}
 					value={value}
@@ -66,4 +66,4 @@ const FormInput: React.FC<FormInputType & TextInputProps> = ({
 	);
 };
 
-export default FormInput;
+export default TextInput;
