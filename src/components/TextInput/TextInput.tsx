@@ -5,6 +5,7 @@ import {
 	Text,
 	TextInput as FormInput,
 	TextInputProps,
+	StyleSheet
 } from "react-native";
 import Error from "../Error/Error";
 
@@ -38,19 +39,14 @@ const TextInput: React.FC<FormInputType & TextInputProps> = ({
 		onChangeText && onChangeText(text);
 	};
 
-	const renderLabel = () =>  
-		<View className="h-4 w-full mb-2">
-			<Text className="font-bold text-sm text-gray-700">{textInputOptions?.label}</Text>
-		</View>
-
 	const passwordOnPress = () => setSecureEntry(!secureEntry);
 	
 	return (
-		<View className="w-full align-top">
-			{renderLabel()}
-			<View className="w-full h-12 items-center justify-center relative">
+		<View style={style.container}>
+			<Text style={style.label}>{textInputOptions?.label}</Text>
+			<View style={style.inputContainer}>
 				<FormInput
-					className="w-full  h-12 px-2 border border-gray-300 rounded-lg"
+					style={style.input}
 					onChangeText={handleTextChange}
 					value={value}
 					onBlur={onBlur}
@@ -59,11 +55,32 @@ const TextInput: React.FC<FormInputType & TextInputProps> = ({
 					{...textInputOptions}
 				/>
 				{type === 'password' 
-					&& <Text onPress={passwordOnPress} className="text-xs text-blue-500 font-bold absolute right-4">{secureEntryLabel}</Text>}
+						&& <Text 
+						onPress={passwordOnPress} 
+						style={style.secureEntryButtonLabel}>
+							{secureEntryLabel}
+						</Text>}
 			</View>
 			<Error error={error} />
 		</View>
 	);
 };
 
+const style = StyleSheet.create({
+	container: {flex: 1, alignItems: 'flex-start'}, 
+	label:{fontWeight: '700', fontSize: 12, color: '#4A5568', height: 20},
+	inputContainer: {
+		height: 52, 
+		width: '100%',  
+		position: 'relative', 
+		justifyContent: 'center', 
+		alignItems: 'center', 
+		flexDirection: 'row', 
+		borderRadius: 8, 
+		borderColor: '#E2E8F0', 
+		borderWidth: 2,
+	}, 
+	input: {height: 52, flex: 1,  paddingHorizontal: 16,  },
+	secureEntryButtonLabel: {position: 'absolute', right: 16, color: '#3182CE', fontSize: 14, fontWeight: '500'}
+})
 export default TextInput;
