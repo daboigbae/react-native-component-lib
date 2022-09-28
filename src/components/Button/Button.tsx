@@ -24,20 +24,33 @@ const Button: React.FC<ButtonType>= ({
 	isLoading = false, 
 	leftIcon = null, 
 	rightIcon = null,
+	customButtonStyle = null, 
+	customTextStyle = null
 }) => {
 	const generateButtonStyle = (borderColor: { backgroundColor?: string | undefined} | undefined, type: string): object => {
+		if(customButtonStyle){
+			return customButtonStyle
+		}
 		if (type === 'outlined') {
 			return {...style.baseButton, borderColor: borderColor?.backgroundColor, ...style.outlinedButton}
-		} else if (type === 'text'){
+		} 
+		if (type === 'text'){
 			return {...style.baseButton}
-		} else {
-			return {...style.baseButton, ...borderColor}
-		}
+		} 
+
+		return {...style.baseButton, ...borderColor}
 	}
+
 	const generatedStyle = generateButtonStyle(buttonColor?.[0], type); 
 
+	const textStyle = customTextStyle ? customTextStyle : textColor;
+
 	return (
-		<PressableOpacity onPress={onPress} disabled={disabled} isLoading={isLoading}>
+		<PressableOpacity 
+			onPress={onPress} 
+			disabled={disabled} 
+			isLoading={isLoading}
+			customStyle={customButtonStyle}>
 			<View style={generatedStyle}>
 				<View style={style.iconContainer}>
 					{leftIcon && leftIcon}
@@ -45,7 +58,7 @@ const Button: React.FC<ButtonType>= ({
 				<View>
 				{isLoading ?
 					<Loader color={textColor?.[0]?.color}/> : 
-					<Text style={textColor}>{label}</Text>
+					<Text style={textStyle}>{label}</Text>
 				}
 				</View>
 				<View style={style.iconContainer}>
@@ -60,7 +73,9 @@ export default styled(Button, {
 	props: {
 		buttonColor: true, 
 		textColor: true, 
-		type: true
+		type: true, 
+		customButtonStyle: true,
+		customTextStyle: true,
 	}
 });
 
@@ -81,7 +96,6 @@ const style = StyleSheet.create({
 	}, 
 	iconContainer: {
 		width: 52,
-		height: 52, 
 	}, 
 
 })
