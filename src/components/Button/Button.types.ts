@@ -11,4 +11,6 @@ export interface ButtonType {
 	isLoading?: boolean;
 	leftIcon?: React.ReactNode; 
 	rightIcon?: React.ReactNode;
+	customButtonStyle?: object;
+	customTextStyle?: object;
 }

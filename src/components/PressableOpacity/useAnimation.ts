@@ -2,7 +2,7 @@ import React from "react";
 import { Animated } from "react-native";
 
 const FADE_IN_ANIMATION_CONFIG = {
-	toValue: .7,
+	toValue: .3,
 	duration: 100,
 	useNativeDriver: false,
 };
