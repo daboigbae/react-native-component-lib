@@ -15,12 +15,20 @@ const Error: React.FC<ErrorType> = ({
 }) => (
 		<View style={style.container}>
 			{error && <Text style={style.text}>
-				{error && error}</Text>}
+				{error}</Text>}
 		</View>
 	)
 
 const style = StyleSheet.create({
-	container: {width: '100%', marginBottom: 4}, 
-	text: {fontSize: 12, color: '#f00'}
+	container: {
+		width: '100%', 
+		height: 12, 
+		marginTop: 4, 
+		marginLeft: 4
+	}, 
+	text: {
+		fontSize: 12, 
+		color: '#f00'
+	}
 })
 export default Error;

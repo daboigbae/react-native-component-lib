@@ -68,7 +68,7 @@ const TextInput: React.FC<FormInputType & TextInputProps> = ({
 
 const style = StyleSheet.create({
 	container: {flex: 1, alignItems: 'flex-start'}, 
-	label:{fontWeight: '700', fontSize: 12, color: '#4A5568', height: 20},
+	label:{fontWeight: '700', fontSize: 12, color: '#4A5568', height: 14, marginLeft: 4, marginBottom: 4},
 	inputContainer: {
 		height: 52, 
 		width: '100%',  
@@ -80,7 +80,17 @@ const style = StyleSheet.create({
 		borderColor: '#E2E8F0', 
 		borderWidth: 2,
 	}, 
-	input: {height: 52, flex: 1,  paddingHorizontal: 16,  },
-	secureEntryButtonLabel: {position: 'absolute', right: 16, color: '#3182CE', fontSize: 14, fontWeight: '500'}
+	input: {
+		height: 52, 
+		flex: 1,  
+		paddingHorizontal: 16,  
+	},
+	secureEntryButtonLabel: {
+		position: 'absolute', 
+		right: 16, 
+		color: '#3182CE', 
+		fontSize: 14, 
+		fontWeight: '500'
+	}
 })
 export default TextInput;
