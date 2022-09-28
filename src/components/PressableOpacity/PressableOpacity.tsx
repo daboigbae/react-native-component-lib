@@ -13,7 +13,8 @@ const PressableOpacity = ({
 	children, 
 	isLoading, 
 	disabled, 
-	customStyle 
+	customStyle, 
+	onPress
 }: PressableOpacityTypes) => {
 	const {
 		fadeIn,
@@ -23,6 +24,7 @@ const PressableOpacity = ({
 
 	return (
 		<Pressable
+			onPress={onPress}
 			disabled={disabled}
 			onPressIn={fadeIn}
 			onPressOut={fadeOut}
