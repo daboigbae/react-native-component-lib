@@ -72,6 +72,13 @@
 	  "type": "git",
 	  "url": "git+https://github.com/daboigbae/react-native-component-lib.git"
 	},
+	
+	"keywords": [
+		"react-native",
+		"tailwindcss",
+		"component library",
+		"typescript"
+	  ],
 	"author": "",
 	"license": "ISC",
 	"bugs": {

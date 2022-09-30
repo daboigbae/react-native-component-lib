@@ -1,11 +1,24 @@
-# React Native Component Lib 💿 💿 💿
-This is the repo for a TailWind (NativeWind) react native component library that aims and improving the speed at which mobile apps are made.
 
-Access the storybook for this component library (here)[https://expo.dev/@ghigared/react-native-component-lib?serviceType=classic&distribution=expo-go]
-### Using library 
 
-To use this component lib inside your project
+<center>
+![alt text](https://img.seadn.io/files/68a331652d4986e1ce5428fc2db6f66a.png?fit=max&w=200)
+**Munchkin - A react native component lib 🧟‍♀️ 🧟‍♀️ 🧟‍♀️**
+https://munchkinreact.app/
+</center>
 
+## Features
+1. Get buttons, loaders, and other components to bootstrap your app development
+2. TailWind CSS compatiable
+3. Written in TypeScript
+
+## Try it out now
+Run the example [storybook](https://testflight.apple.com/join/zVYWbbm1 "storybook"), now available on iOS
+
+## Getting started
+Fastest way to get started is to use our [template](https://github.com/daboigbae/react-native-template). To use this component lib inside your project
 1. Install and configure (nativewind)[https://www.nativewind.dev/]
 2. run `yarn add @digital-art-dealers/react-native-component-lib` in your project
 3. add `node_modules/@digital-art-dealers/react-native-component-lib/**/*.{js,jsx,ts,tsx}` to your `tailwind.config.js`
+
+## View the code
+To view code to the sample storybook [here](https://github.com/daboigbae/react-native-component-lib)
