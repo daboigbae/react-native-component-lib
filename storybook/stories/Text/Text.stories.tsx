@@ -1,4 +1,4 @@
-// Typography.stories.js
+// Text.stories.js
 
 import React from "react";
 import { View } from "react-native";
@@ -6,9 +6,9 @@ import { View } from "react-native";
 import { text, select } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react-native";
 
-import { Typography } from "../../../src";
+import { Text } from "../../../src";
 
-storiesOf("Typography", module)
+storiesOf("Text", module)
 	.addDecorator((getStory) => (
 		<View className="w-full h-full items-center justify-center">
 			{getStory()}
@@ -17,7 +17,7 @@ storiesOf("Typography", module)
 	.add("Title", () => {
 		return (
 			<View className="w-full px-4">
-				<Typography
+				<Text
 					type="title"
 					text={text("text", "This is a title")}
 					textColor={select(
@@ -32,7 +32,7 @@ storiesOf("Typography", module)
 	.add("SubTitle", () => {
 		return (
 			<View className="w-full px-4">
-				<Typography
+				<Text
 					type="subtitle"
 					text={text("text", "This is a subtitle")}
 					textColor={select(
@@ -47,7 +47,7 @@ storiesOf("Typography", module)
 	.add("Body", () => {
 		return (
 			<View className="w-full px-4">
-				<Typography
+				<Text
 					text={text("text", "This is an example of body text")}
 					textColor={select(
 						"text color",

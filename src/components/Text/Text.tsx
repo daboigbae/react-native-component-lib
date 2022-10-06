@@ -1,12 +1,12 @@
 import React from "react";
 
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text as RNText } from "react-native";
 
 import { styled } from "nativewind";
 
-import { TextType } from "./Typography.types";
+import { TextType } from "./Text.types";
 
-const Typography: React.FC<TextType> = ({ text, textColor, type }) => {
+const Text: React.FC<TextType> = ({ text, textColor, type }) => {
 	const generateTextStyle = (
 		color: { color?: string | undefined } | undefined,
 		type: string | undefined
@@ -17,18 +17,17 @@ const Typography: React.FC<TextType> = ({ text, textColor, type }) => {
 		if (type === "subtitle") {
 			return { ...style.subtitle, ...color };
 		}
-		return { ...style.body, ...color };
+		return { ...style.default, ...color };
 	};
 
 	const generatedStyle = generateTextStyle(textColor?.[0], type);
 
-	return <Text style={generatedStyle}>{text}</Text>;
+	return <RNText style={generatedStyle}>{text}</RNText>;
 };
 
-export default styled(Typography, {
+export default styled(Text, {
 	props: {
-		textColor: true,
-		type: true
+		textColor: true
 	}
 });
 
@@ -41,7 +40,7 @@ const style = StyleSheet.create({
 		fontSize: 24,
 		fontWeight: "600"
 	},
-	body: {
+	default: {
 		fontSize: 16,
 		fontWeight: "300"
 	}
