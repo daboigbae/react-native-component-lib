@@ -1,9 +1,13 @@
 <p align="center">
-![alt text](https://github.com/daboigbae/react-native-component-lib/blob/main/assets/logo.png?w=200)
-
-**Munchkin - A react native component lib 🧟‍♀️ 🧟‍♀️ 🧟‍♀️**
-https://munchkinreact.app/
+  <img width="200" height="200" src="https://github.com/daboigbae/react-native-component-lib/blob/main/assets/logo.png"/>
 </p>
+
+<p align="center">Munchkin - A react native component lib</p>
+
+<p align="center">
+  <a href="https://munchkinreact.app/">munchkinreact.app</a>
+</p>
+
 
 #### Features
 1. Get buttons, loaders, and other components to bootstrap your app development
