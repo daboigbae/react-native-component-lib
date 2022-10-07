@@ -7,37 +7,27 @@ import { styled } from "nativewind";
 import { CardType } from "./Card.types";
 
 const Card: React.FC<CardType> = ({ type, cardColor, imageURL, children }) => {
-	const generateCardBaseStyle = (
-		cardColor: { backgroundColor?: string | undefined } | undefined,
-		type: string | undefined
-	): object => {
-		if (type === "elevated") {
-			return {
-				...style.baseCard,
-				...style.elevatedCard,
-				...cardColor
-			};
-		}
-
-		if (type === "outlined") {
-			return {
-				...style.baseCard,
-				...style.outlinedCard,
-				borderColor: cardColor?.backgroundColor
-			};
-		}
-
-		return {
-			...style.baseCard,
-			...style.containedCard,
-			...cardColor
-		};
+	let cardStyle = {
+		...style.baseCard,
+		...cardColor?.[0]
 	};
 
-	const generatedStyle = generateCardBaseStyle(cardColor?.[0], type);
+	let outlinedCardStyle = {
+		...style.baseCard,
+		borderColor: cardColor?.[0].backgroundColor
+	};
+
+	if (type === "elevated")
+		cardStyle = StyleSheet.compose(cardStyle, style.elevatedCard as any);
+
+	if (type === "outlined")
+		cardStyle = StyleSheet.compose(
+			outlinedCardStyle,
+			style.outlinedCard as any
+		);
 
 	return (
-		<View style={generatedStyle}>
+		<View style={cardStyle}>
 			{imageURL && <Image source={{ uri: imageURL }} style={style.cardImage} />}
 			{children && (
 				<View style={{ ...style.childrenContainer }}>{children}</View>
@@ -67,7 +57,6 @@ const style = StyleSheet.create({
 		shadowOpacity: 0.36,
 		shadowRadius: 6.68
 	},
-	containedCard: {},
 	outlinedCard: {
 		borderWidth: 2
 	},
