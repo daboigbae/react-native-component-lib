@@ -1,5 +1,5 @@
 <p align="center">
-![alt text](https://img.seadn.io/files/68a331652d4986e1ce5428fc2db6f66a.png?w=200)
+![alt text](https://github.com/daboigbae/react-native-component-lib/blob/main/assets/logo.png?w=200)
 
 **Munchkin - A react native component lib 🧟‍♀️ 🧟‍♀️ 🧟‍♀️**
 https://munchkinreact.app/
