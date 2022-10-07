@@ -14,12 +14,11 @@ storiesOf("Text", module)
 			{getStory()}
 		</View>
 	))
-	.add("Title", () => {
+	.add("Default", () => {
 		return (
 			<View className="w-full px-4">
 				<Text
-					type="title"
-					text={text("text", "This is a title")}
+					text={text("text", "This is an example of body text")}
 					textColor={select(
 						"text color",
 						["text-black", "text-blue-600", "text-red-600", "text-gray-400"],
@@ -44,11 +43,12 @@ storiesOf("Text", module)
 			</View>
 		);
 	})
-	.add("Body", () => {
+	.add("Title", () => {
 		return (
 			<View className="w-full px-4">
 				<Text
-					text={text("text", "This is an example of body text")}
+					type="title"
+					text={text("text", "This is a title")}
 					textColor={select(
 						"text color",
 						["text-black", "text-blue-600", "text-red-600", "text-gray-400"],
