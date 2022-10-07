@@ -7,22 +7,15 @@ import { styled } from "nativewind";
 import { TextType } from "./Text.types";
 
 const Text: React.FC<TextType> = ({ text, textColor, type }) => {
-	const generateTextStyle = (
-		color: { color?: string | undefined } | undefined,
-		type: string | undefined
-	): object => {
-		if (type === "title") {
-			return { ...style.title, ...color };
-		}
-		if (type === "subtitle") {
-			return { ...style.subtitle, ...color };
-		}
-		return { ...style.default, ...color };
-	};
+	let textStyle = {...style.default, ...textColor?.[0]}
 
-	const generatedStyle = generateTextStyle(textColor?.[0], type);
+	if (type === "title")
+		textStyle = StyleSheet.compose(textStyle, style.title as any)
 
-	return <RNText style={generatedStyle}>{text}</RNText>;
+	if (type === "subtitle")
+		textStyle = StyleSheet.compose(textStyle, style.subtitle as any)
+
+	return <RNText style={textStyle}>{text}</RNText>;
 };
 
 export default styled(Text, {
