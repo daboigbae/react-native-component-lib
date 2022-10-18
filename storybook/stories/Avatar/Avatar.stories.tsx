@@ -29,7 +29,7 @@ storiesOf("Avatar", module)
 	.add("With Username", () => {
 		return (
 			<View className="h-40 w-40">
-				<Avatar image="" username="Test User" />
+				<Avatar username="Test User" />
 			</View>
 		);
 	});

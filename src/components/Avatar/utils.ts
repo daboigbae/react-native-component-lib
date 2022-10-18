@@ -8,7 +8,7 @@ export const getAvatarInitials = (name?: string) => {
 
 	if (parts) {
 		for (var i = 0; i < parts?.length; i++) {
-			if (parts?.[i].length > 0 && parts?.[i] !== "") {
+			if (parts?.[i].trim()?.length > 0) {
 				initials += parts?.[i][0];
 			}
 		}

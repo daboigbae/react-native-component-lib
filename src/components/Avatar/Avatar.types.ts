@@ -1,4 +1,4 @@
 export interface AvatarType {
-	username?: string | undefined;
-	image?: string | undefined;
+	username?: string;
+	image?: string;
 }

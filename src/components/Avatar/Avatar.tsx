@@ -5,16 +5,16 @@ import { StyleSheet, View, Text, Image } from "react-native";
 import { styled } from "nativewind";
 
 import { AvatarType } from "./Avatar.types";
-import { getAvatarColor, getAvatarInitials } from "../../utils";
+import { getAvatarColor, getAvatarInitials } from "./utils";
+
+const backgroundColor = getAvatarColor();
 
 const Avatar: React.FC<AvatarType> = ({ username, image }) => {
-	const [backgroundColor, setBackgroundColor] = React.useState("");
-
-	let avatarStyle = { ...style.avatarBase, backgroundColor };
-
-	React.useEffect(() => {
-		setBackgroundColor(getAvatarColor());
-	}, []);
+	
+	let avatarStyle = StyleSheet.compose(
+		{ backgroundColor },
+		style.avatarBase as any
+	);
 
 	return (
 		<View style={avatarStyle}>
