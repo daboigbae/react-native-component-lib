@@ -10,14 +10,8 @@ import { getAvatarColor, getAvatarInitials } from "./utils";
 const backgroundColor = getAvatarColor();
 
 const Avatar: React.FC<AvatarType> = ({ username, image }) => {
-	
-	let avatarStyle = StyleSheet.compose(
-		{ backgroundColor },
-		style.avatarBase as any
-	);
-
 	return (
-		<View style={avatarStyle}>
+		<View style={style.avatarBase}>
 			{image ? (
 				<Image source={{ uri: image }} style={style.avatarImage} />
 			) : (
@@ -36,7 +30,8 @@ const style = StyleSheet.create({
 		borderRadius: 100,
 		display: "flex",
 		justifyContent: "center",
-		alignItems: "center"
+		alignItems: "center",
+		backgroundColor
 	},
 	avatarImage: {
 		height: "100%",
