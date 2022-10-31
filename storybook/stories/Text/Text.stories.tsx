@@ -19,6 +19,7 @@ storiesOf("Text", module)
 			<View className="w-full px-4">
 				<Text
 					text={text("text", "This is an example of body text")}
+					textAlign={select("textAlign", ["left", "center", "right"], "left")}
 					textColor={select(
 						"text color",
 						["text-black", "text-blue-600", "text-red-600", "text-gray-400"],
@@ -34,6 +35,7 @@ storiesOf("Text", module)
 				<Text
 					type="subtitle"
 					text={text("text", "This is a subtitle")}
+					textAlign={select("textAlign", ["left", "center", "right"], "left")}
 					textColor={select(
 						"text color",
 						["text-black", "text-blue-600", "text-red-600", "text-gray-400"],
@@ -49,6 +51,7 @@ storiesOf("Text", module)
 				<Text
 					type="title"
 					text={text("text", "This is a title")}
+					textAlign={select("textAlign", ["left", "center", "right"], "left")}
 					textColor={select(
 						"text color",
 						["text-black", "text-blue-600", "text-red-600", "text-gray-400"],
