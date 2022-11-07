@@ -6,15 +6,8 @@ import { styled } from "nativewind";
 
 import { TextType } from "./Text.types";
 
-const Text: React.FC<TextType> = ({
-	text,
-	textColor,
-	textAlign,
-	type,
-	onPress,
-	children
-}) => {
-	let textStyle = { ...style.default, ...textColor?.[0], textAlign };
+const Text: React.FC<TextType> = ({ textColor, type, onPress, children }) => {
+	let textStyle = { ...style.default, ...textColor?.[0] };
 
 	if (type === "title")
 		textStyle = StyleSheet.compose(textStyle, style.title as any);
@@ -24,7 +17,7 @@ const Text: React.FC<TextType> = ({
 
 	return (
 		<RNText style={textStyle} onPress={onPress}>
-			{text} {children && children}
+			{children && children}
 		</RNText>
 	);
 };
