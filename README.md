@@ -4,7 +4,7 @@
 
 
 
-<p align="center">Munchkin - A react native component lib compatible with TailWind CSS</p>
+<p align="center">👾Munchkin - A react native component lib compatible with TailWind CSS</p>
 
 <p align="center">
   <a href="https://munchkinreact.app/">munchkinreact.app</a>
