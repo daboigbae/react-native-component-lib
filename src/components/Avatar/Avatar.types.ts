@@ -1,4 +1,4 @@
 export interface AvatarType {
 	username?: string;
-	image?: string;
+	image?: object;
 }
