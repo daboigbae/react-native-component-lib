@@ -9,7 +9,7 @@
 <p align="center">👾Munchkin - A react native component lib compatible with TailWind CSS</p>
 
 <p align="center">
-  ⭐Help us out by giving a star⭐
+  ⭐ Help us out by giving a star ⭐
 </p>
 
 
