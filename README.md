@@ -6,7 +6,7 @@
   <a href="https://munchkinreact.app/">munchkinreact.app</a>
 </p>
 
-<p align="center">👾Munchkin - A react native component lib compatible with TailWind CSS</p>
+<p align="center">👾 Munchkin - A react native component lib compatible with TailWind CSS</p>
 
 <p align="center">
   ⭐ Help us out by giving a star ⭐
