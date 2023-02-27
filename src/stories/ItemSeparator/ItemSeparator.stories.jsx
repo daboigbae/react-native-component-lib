@@ -3,7 +3,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react-native";
 import { View, Text, FlatList } from "react-native";
-import { ItemSeparator } from "../../../src";
+import { ItemSeparator } from "../../components";
 
 const SONGS  = [{
 	artist: "Gucci Mane", 

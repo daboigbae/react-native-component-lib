@@ -1,7 +1,7 @@
 {
 	"name": "@digital-art-dealers/react-native-component-lib",
-	"version": "1.0.10",
-	"main": "node_modules/expo/AppEntry.js",
+	"version": "1.0.13",
+	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"files": [
 	  "dist",
@@ -10,16 +10,12 @@
 	],
 	"title": "React Native Component Lib",
 	"scripts": {
-	  "start": "expo start",
-	  "android": "expo start --android",
-	  "ios": "expo start --ios",
-	  "web": "expo start --web",
-	  "storybook": "start-storybook -p 7007",
-	  "build-storybook": "build-storybook",
 	  "prettier-format": "prettier --config .prettierrc.js 'src/**/*.js' --write",
 	  "build": "rm -rf /dist && npm run build:esm && npm run build:cjs",
 	  "build:esm": "tsc",
-	  "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+	  "build:cjs": "tsc --module CommonJS --outDir dist/cjs", 
+	  "change:package:prod": "bash/change-package-prod.sh", 
+	  "change:package:dev": "bash/change-package-dev.sh"
 	},
 	"lint-staged": {
 	  "*.{js,jsx,ts,tsx}": [
@@ -72,17 +68,21 @@
 	  "type": "git",
 	  "url": "git+https://github.com/daboigbae/react-native-component-lib.git"
 	},
+	
+	"keywords": [
+		"react-native",
+		"tailwindcss",
+		"component library",
+		"typescript"
+	  ],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
 	  "url": "https://github.com/daboigbae/react-native-component-lib/issues"
 	},
 	"homepage": "https://github.com/daboigbae/react-native-component-lib#readme",
-	"dependencies": {
-	  "expo": "^46.0.10",
-	  "expo-status-bar": "^1.4.0", 
+	"peerDependencies": {
 	  "@react-native-async-storage/async-storage": "~1.17.3",
-	  "expo-updates": "~0.14.5",
 	  "nativewind": "^2.0.10",
 	  "react": "18.0.0",
 	  "react-dom": "18.0.0",
