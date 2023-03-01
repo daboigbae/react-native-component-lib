@@ -16,13 +16,20 @@ storiesOf("Avatar", module)
 			{getStory()}
 		</View>
 	))
-	.add("With Image", () => {
+	.add("With Image URL", () => {
 		return (
 			<View className="h-40 w-40">
 				<Avatar
-					image="https://www.w3schools.com/howto/img_avatar.png"
+					image={{ uri: "https://www.w3schools.com/howto/img_avatar.png" }}
 					username="Test User"
 				/>
+			</View>
+		);
+	})
+	.add("With Local Image", () => {
+		return (
+			<View className="h-40 w-40">
+				<Avatar image={require("./assets/avatar.png")} />
 			</View>
 		);
 	})

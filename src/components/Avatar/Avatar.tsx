@@ -13,7 +13,7 @@ const Avatar: React.FC<AvatarType> = ({ username, image }) => {
 	return (
 		<View style={style.avatarBase}>
 			{image ? (
-				<Image source={{ uri: image }} style={style.avatarImage} />
+				<Image source={image} style={style.avatarImage} />
 			) : (
 				<Text style={style.avatarText}>{getAvatarInitials(username)}</Text>
 			)}

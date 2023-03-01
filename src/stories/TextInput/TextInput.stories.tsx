@@ -1,4 +1,4 @@
-// Button.stories.js
+// TextInput.stories.js
 
 import React from "react";
 
@@ -10,7 +10,11 @@ import {  text } from "@storybook/addon-knobs";
 import { TextInput } from "../../components";
 
 storiesOf("Text Input", module)
-	.addDecorator((getStory) => <View className="w-full h-full items-center justify-center">{getStory()}</View>)
+	.addDecorator((getStory) => (
+		<View className="w-full h-full items-center justify-center">
+			{getStory()}
+		</View>
+	))
 	.add("Standard", () => (
 		<View className="w-full px-4">
 			<TextInput
@@ -34,4 +38,3 @@ storiesOf("Text Input", module)
 			/>
 		</View>
 	));
-	
