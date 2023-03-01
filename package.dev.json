@@ -1,6 +1,6 @@
 {
 	"name": "@digital-art-dealers/react-native-component-lib",
-	"version": "1.0.10",
+	"version": "2.0.0",
 	"main": "node_modules/expo/AppEntry.js",
 	"module": "dist/esm/index.js",
 	"files": [
