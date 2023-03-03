@@ -41,3 +41,6 @@ To build the library, run `yarn change:package:prod`, set version in `package.js
 
 ##### Build library for local testing (optional)
 To make a test version of the library (.tgz) run `yarn pack`
+
+#### Troubleshooting
+If you're getting permission denied on your scripts. Make sure to change their permissions by running `chmod +x bash/change-package-dev.sh ` and `chmod +x bash/change-package-prod.sh`
