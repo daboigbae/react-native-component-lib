@@ -16,8 +16,8 @@
     "strict": true,
     "target": "ES6"
   }, 
-  "include": [ "src/storybook/**/*.tsx", "app.d.ts", "src/components/index.ts"],
+  "include": [ "src/**/*.tsx", "app.d.ts", "src/**/*.ts"],
   "exclude": [
-
+	"src/storybook/**/*.tsx"
   ],
 }

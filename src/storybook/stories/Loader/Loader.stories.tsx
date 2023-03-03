@@ -4,7 +4,7 @@ import React from "react";
 import { View } from "react-native";
 
 import { storiesOf } from "@storybook/react-native";
-import { Loader } from "../../components";
+import { Loader } from "../../../components";
 
 
 storiesOf("Loader ", module)

@@ -4,7 +4,7 @@ import React from "react";
 import { View } from "react-native";
 
 import { storiesOf } from "@storybook/react-native";
-import { Pill } from "../../components";
+import { Pill } from "../../../components";
 
 
 
