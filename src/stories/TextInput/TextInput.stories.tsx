@@ -6,8 +6,8 @@ import { storiesOf } from "@storybook/react-native";
 
 import { View } from "react-native";
 
-import FormInput from "../../../src/components/TextInput/TextInput";
-import { text } from "@storybook/addon-knobs";
+import {  text } from "@storybook/addon-knobs";
+import { TextInput } from "../../components";
 
 storiesOf("Text Input", module)
 	.addDecorator((getStory) => (
@@ -17,7 +17,7 @@ storiesOf("Text Input", module)
 	))
 	.add("Standard", () => (
 		<View className="w-full px-4">
-			<FormInput
+			<TextInput
 				label={text("Label", "Label")}
 				placeholder={text("Placeholder", "Sample placeholder")}
 				error="Sample error message"
@@ -26,11 +26,15 @@ storiesOf("Text Input", module)
 	))
 	.add("Email", () => (
 		<View className="w-full px-4">
-			<FormInput type="email" />
+			<TextInput
+				type="email"
+			/>
 		</View>
 	))
 	.add("Password", () => (
 		<View className="w-full px-4">
-			<FormInput type="password" />
+			<TextInput
+				type="password"
+			/>
 		</View>
 	));

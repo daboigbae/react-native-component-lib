@@ -12,3 +12,9 @@ web-build/
 
 # macOS
 .DS_Store
+
+# ignore local builds for project
+/digital-art-dealers-react-native-component-lib-v**
+
+# ignore yarn error log
+yarn-error.log

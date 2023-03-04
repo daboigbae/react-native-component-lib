@@ -4,8 +4,8 @@ import React from "react";
 import { View } from "react-native";
 
 import { storiesOf } from "@storybook/react-native";
+import { Loader } from "../../components";
 
-import Loader from "../../../src/components/Loader/Loader";
 
 storiesOf("Loader ", module)
 	.addDecorator((getStory) => <View className="w-full h-full items-center justify-center">{getStory()}</View>)

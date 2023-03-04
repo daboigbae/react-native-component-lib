@@ -7,8 +7,8 @@ import { text, select, number } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react-native";
 
 import { Text, View } from "react-native";
-import { Button, Card, ItemSeparator } from "../../../src";
 import { action } from "@storybook/addon-actions";
+import { Button, Card, ItemSeparator } from "../../components";
 
 storiesOf("Cards", module)
 	.addDecorator((getStory) => (
