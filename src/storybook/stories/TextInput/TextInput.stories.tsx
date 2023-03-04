@@ -7,7 +7,7 @@ import { storiesOf } from "@storybook/react-native";
 import { View } from "react-native";
 
 import {  text } from "@storybook/addon-knobs";
-import { TextInput } from "../../components";
+import { TextInput } from "../../../components";
 
 storiesOf("Text Input", module)
 	.addDecorator((getStory) => (

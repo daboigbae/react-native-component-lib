@@ -2,13 +2,13 @@
 
 import React from "react";
 
-import { text, select, number } from "@storybook/addon-knobs";
+import { text } from "@storybook/addon-knobs";
 
 import { storiesOf } from "@storybook/react-native";
 
 import { Text, View } from "react-native";
 import { action } from "@storybook/addon-actions";
-import { Button, Card, ItemSeparator } from "../../components";
+import { Button, Card, ItemSeparator } from "../../../components";
 
 storiesOf("Cards", module)
 	.addDecorator((getStory) => (

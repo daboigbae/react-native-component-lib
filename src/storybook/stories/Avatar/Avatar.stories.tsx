@@ -2,13 +2,11 @@
 
 import React from "react";
 
-import { action } from "@storybook/addon-actions";
-import { text, select, boolean } from "@storybook/addon-knobs";
-
 import { storiesOf } from "@storybook/react-native";
 
-import { View, Text } from "react-native";
-import { Avatar } from "../../components";
+import { View } from "react-native";
+import { Avatar } from "../../../components";
+
 
 storiesOf("Avatar", module)
 	.addDecorator((getStory) => (

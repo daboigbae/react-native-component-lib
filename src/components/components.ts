@@ -5,3 +5,4 @@ export { default as TextInput } from "./TextInput";
 export { default as Card } from "./Card";
 export { default as Text } from "./Text";
 export { default as Avatar } from "./Avatar";
+export { default as Pill } from "./Pill";
