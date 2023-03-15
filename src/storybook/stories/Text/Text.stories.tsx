@@ -1,12 +1,11 @@
 // Text.stories.js
 
 import React from "react";
-import { View, Text as RNText } from "react-native";
+import { View } from "react-native";
 
-import { text, select } from "@storybook/addon-knobs";
+import { select } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react-native";
-
-import { Text } from "../../../src";
+import { Text } from "../../../components";
 
 storiesOf("Text", module)
 	.addDecorator((getStory) => (

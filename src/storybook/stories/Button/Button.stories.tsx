@@ -3,12 +3,12 @@
 import React from "react";
 
 import { action } from "@storybook/addon-actions";
-import {text, select, boolean} from "@storybook/addon-knobs";
+import {text, boolean} from "@storybook/addon-knobs";
 
 import { storiesOf } from "@storybook/react-native";
 
 import { View, Text } from "react-native";
-import { Button } from "../../../src";
+import { Button } from "../../../components";
 
 storiesOf("Buttons", module)
 	.addDecorator((getStory) => <View className="w-full h-full items-center justify-center">{getStory()}</View>)

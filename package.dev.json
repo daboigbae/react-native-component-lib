@@ -1,6 +1,6 @@
 {
 	"name": "@digital-art-dealers/react-native-component-lib",
-	"version": "1.0.10",
+	"version": "2.0.0",
 	"main": "node_modules/expo/AppEntry.js",
 	"module": "dist/esm/index.js",
 	"files": [
@@ -17,9 +17,8 @@
 	  "storybook": "start-storybook -p 7007",
 	  "build-storybook": "build-storybook",
 	  "prettier-format": "prettier --config .prettierrc.js 'src/**/*.js' --write",
-	  "build": "rm -rf /dist && npm run build:esm && npm run build:cjs",
-	  "build:esm": "tsc",
-	  "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+	  "change:package:prod": "bash/change-package-prod.sh", 
+	  "change:package:dev": "bash/change-package-dev.sh"
 	},
 	"lint-staged": {
 	  "*.{js,jsx,ts,tsx}": [
